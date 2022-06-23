@@ -1,4 +1,4 @@
-﻿namespace UsersAuthWebApi.Entities
+﻿namespace UsersAuthWebApi.Models
 {
     public class RefreshToken
     {

@@ -1,4 +1,4 @@
-﻿namespace UsersAuthWebApi.Entities
+﻿namespace UsersAuthWebApi.Models
 {
     public class Account
     {
@@ -19,5 +19,10 @@
         public DateTime Created { get; set; }
         public DateTime? Updated { get; set; }
         public List<RefreshToken> RefreshTokens { get; set; }
+
+        public bool OwnsToken(string token)
+        {
+            return this.RefreshTokens?.Find(x => x.Token == token) != null;
+        }
     }
 }
